@@ -1,15 +1,17 @@
 package iit.jee.gestionimpressionjee.services;
-
 import iit.jee.gestionimpressionjee.models.Enseignant;
 
-import java.util.List;
+public class EnseignantService {
 
-public interface EnseignantService {
+    public boolean validerDemandeTirage(Enseignant enseignant, String matiere, String documentPDF, String dateHeureRetrait, int nombreCopies) {
+        if (nombreCopies <= 0 || nombreCopies > enseignant.getNombreEtudiantsGroupe()) {
+            return false;
+        }
+        return true;
+    }
 
-    // Add methods for managing Enseignant entities here
-    void ajouterEnseignant(Enseignant enseignant);
-    void modifierEnseignant(Enseignant enseignant);
-    void supprimerEnseignant(Long id);
-    Enseignant getEnseignantById(Long id);
-    List<Enseignant> getAllEnseignants();
+    public boolean envoyerDocumentPDF(String documentPDF) {
+        return true;
+    }
+
 }

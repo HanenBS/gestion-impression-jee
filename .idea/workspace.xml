@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="gestion-impression-jee:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6367d0aa-9307-4b32-a2b1-35fabe9f8426" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/Administrateur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/servlet/AdministrateurServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/servlet/AgentTirageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/servlet/EnseignantServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/servlet/MatiereServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/utils/MongoDBUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/agentTirage/confirmationDemande.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/tableauBord.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/controllers/AdministrateurController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/controllers/AgentTirageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/controllers/EnseignantController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/DemandeImpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/DemandeImpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/Enseignant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/Enseignant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/Etudiant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/Matiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/Matiere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/models/Utilisateur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/AdministrateurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/AdministrateurService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/AdministrateurServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/DemandeImpressionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/DemandeImpressionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/DemandeImpressionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/EnseignantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/EnseignantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/EnseignantServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/services/MatiereService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iit/jee/gestionimpressionjee/utils/MatiereUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/agentTirage/accueilAgentTirage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/agentTirage/accueilAgentTirage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/agentTirage/listeTaches.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/enseignant/demandeTirage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/enseignant/accueilEnseignant.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/enseignant/accueilEnseignant.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/enseignant/demandeImpression.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2gBaHjulDYb9rKVu4K4adM854yK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.Tomcat JavaScript.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.accueilAdministrateur.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.accueilAgentTirage.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.accueilEnseignant.jsp.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.consultationDemandes.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.demandeTirage.jsp (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.demandeTirage.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.tableauBord.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilAdministrateur.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilAgentTirage.jsp (1).executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilAgentTirage.jsp (2).executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilAgentTirage.jsp (3).executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilAgentTirage.jsp (4).executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilAgentTirage.jsp (5).executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilAgentTirage.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilEnseignant.jsp (1).executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilEnseignant.jsp (2).executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.accueilEnseignant.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.demandeTirage.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.login.jsp (1).executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.login.jsp (2).executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.login.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.tableauBord.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main__rabeb&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rabeb/Pictures/impression&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rabeb\Pictures\gestion-impression-jee\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.tableauBord.jsp">
+    <configuration name="accueilAgentTirage.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/gestion_impression_jee_war_exploded/pages/agentTirage/accueilAgentTirage.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="tableauBord.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/gestion_impression_jee_war_exploded/pages/tableauBord.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="accueilAgentTirage.jsp (1)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat " ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/pages/agentTirage/accueilAgentTirage.jsp" />
+      <deployment>
+        <artifact name="gestion-impression-jee:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/gestion_impression_jee_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="6e987382-4aa6-4ee0-9326-924c55a80bfe" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="gestion-impression-jee:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="accueilAgentTirage.jsp (2)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat " ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/pages/agentTirage/accueilAgentTirage.jsp" />
+      <deployment>
+        <artifact name="gestion-impression-jee:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/gestion_impression_jee_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="99bb21b2-c0ab-40ca-97f5-bcef10b73193" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="gestion-impression-jee:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="accueilAgentTirage.jsp (4)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat " ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/pages/agentTirage/accueilAgentTirage.jsp" />
+      <deployment>
+        <artifact name="gestion-impression-jee:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/gestion_impression_jee_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="e06472bc-d806-47bf-99e3-59b1f455644b" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="gestion-impression-jee:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.accueilAgentTirage.jsp" />
+      <item itemvalue="JavaScript Debug.tableauBord.jsp" />
+      <item itemvalue="Tomcat Server.accueilAgentTirage.jsp (1)" />
+      <item itemvalue="Tomcat Server.accueilAgentTirage.jsp (2)" />
+      <item itemvalue="Tomcat Server.accueilAgentTirage.jsp (4)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.tableauBord.jsp" />
+        <item itemvalue="JavaScript Debug.accueilAgentTirage.jsp" />
+        <item itemvalue="Tomcat Server.accueilAgentTirage.jsp (2)" />
+        <item itemvalue="Tomcat Server.accueilAgentTirage.jsp (4)" />
+        <item itemvalue="Tomcat Server.accueilAgentTirage.jsp (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6367d0aa-9307-4b32-a2b1-35fabe9f8426" name="Changes" comment="" />
+      <created>1715173341063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715173341063</updated>
+      <workItem from="1715173342811" duration="388000" />
+      <workItem from="1715180062770" duration="2254000" />
+      <workItem from="1715184246850" duration="404000" />
+      <workItem from="1715184686397" duration="19000" />
+      <workItem from="1715186605130" duration="12827000" />
+      <workItem from="1715260325450" duration="11711000" />
+      <workItem from="1715275389810" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gestion_impression_jee$accueilAgentTirage_jsp.dat" NAME="accueilAgentTirage.jsp Coverage Results" MODIFIED="1715269765869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/gestion_impression_jee$accueilAdministrateur_jsp.dat" NAME="accueilAdministrateur.jsp Coverage Results" MODIFIED="1715261594010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/gestion_impression_jee$login_jsp.dat" NAME="login.jsp Coverage Results" MODIFIED="1715263217841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/gestion_impression_jee$accueilEnseignant_jsp.dat" NAME="accueilEnseignant.jsp Coverage Results" MODIFIED="1715190139795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/gestion_impression_jee$tableauBord_jsp.dat" NAME="tableauBord.jsp Coverage Results" MODIFIED="1715264237444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

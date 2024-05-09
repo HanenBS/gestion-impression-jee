@@ -1,20 +1,38 @@
 package iit.jee.gestionimpressionjee.services;
 
-import iit.jee.gestionimpressionjee.models.Utilisateur;
+import iit.jee.gestionimpressionjee.models.Administrateur;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public interface AdministrateurService {
+public class AdministrateurService {
+    private List<Administrateur> administrateurs;
 
-    void creerUtilisateur(Utilisateur utilisateur);
+    public AdministrateurService() {
+        this.administrateurs = new ArrayList<>();
+    }
 
-    void activerUtilisateur(int idUtilisateur);
+    public void creerAdministrateur(Administrateur admin) {
+        administrateurs.add(admin);
+    }
 
-    void desactiverUtilisateur(int idUtilisateur);
+    public void activerAdministrateur(int idAdmin) {
+        for (Administrateur admin : administrateurs) {
+            if (admin.getId() == idAdmin) {
+                break;
+            }
+        }
+    }
 
-    // Liste des utilisateurs
-    List<Utilisateur> getAllUtilisateurs();
+    public void desactiverAdministrateur(int idAdmin) {
+        for (Administrateur admin : administrateurs) {
+            if (admin.getId() == idAdmin) {
+                break;
+            }
+        }
+    }
 
-    // Détails d'un utilisateur
-    Utilisateur getUtilisateurById(int idUtilisateur);
+    public List<Administrateur> getAllAdministrateurs() {
+        return administrateurs;
+    }
 }

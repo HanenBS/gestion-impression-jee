@@ -3,63 +3,43 @@ package iit.jee.gestionimpressionjee.models;
 import java.util.Date;
 
 public class DemandeImpression {
-    private int id;
-    private Enseignant enseignant;
-    private Matiere matiere;
-    private int nombreCopies;
-    private Date dateArrivee;
+    private String enseignant;
+    private String matiere;
+    private int groupe;
+    private Date dateImpression;
+    private String etat;
+    private int nombreDePages;
 
-    // Constructeur
-    public DemandeImpression(int id, Enseignant enseignant, Matiere matiere, int nombreCopies, Date dateArrivee) {
-        this.id = id;
+    public DemandeImpression(String enseignant, String matiere, int groupe, Date dateImpression, int nombreDePages, String etat) {
         this.enseignant = enseignant;
         this.matiere = matiere;
-        this.nombreCopies = nombreCopies;
-        this.dateArrivee = dateArrivee;
+        this.groupe = groupe;
+        this.dateImpression = dateImpression;
+        this.etat = etat;
+        this.nombreDePages = this.nombreDePages;
     }
 
-    public DemandeImpression() {
-
-    }
-
-    // Getters et Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Enseignant getEnseignant() {
+    public String getEnseignant() {
         return enseignant;
     }
 
-    public void setEnseignant(Enseignant enseignant) {
-        this.enseignant = enseignant;
-    }
-
-    public Matiere getMatiere() {
+    public String getMatiere() {
         return matiere;
     }
 
-    public void setMatiere(Matiere matiere) {
-        this.matiere = matiere;
+    public Date getDateImpression() {
+        return dateImpression;
     }
 
-    public int getNombreCopies() {
-        return nombreCopies;
+    public String getEtat() {
+        return etat;
     }
 
-    public void setNombreCopies(int nombreCopies) {
-        this.nombreCopies = nombreCopies;
+    public int getNombreDePages() {
+        return nombreDePages;
     }
 
-    public Date getDateArrivee() {
-        return dateArrivee;
-    }
-
-    public void setDateArrivee(Date dateArrivee) {
-        this.dateArrivee = dateArrivee;
+    public int getGroupe() {
+        return groupe;
     }
 }

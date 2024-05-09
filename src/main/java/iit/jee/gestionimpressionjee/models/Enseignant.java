@@ -1,24 +1,15 @@
 package iit.jee.gestionimpressionjee.models;
 
 public class Enseignant {
-    private int id;
+
     private String nom;
-    private String prenom;
+    private String matiereEnseignee;
+    private int nombreEtudiantsGroupe;
 
-    // Constructeur
-    public Enseignant(int id, String nom, String prenom) {
-        this.id = id;
+    public Enseignant(String nom, String matiereEnseignee, int nombreEtudiantsGroupe) {
         this.nom = nom;
-        this.prenom = prenom;
-    }
-
-    // Getters et Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.matiereEnseignee = matiereEnseignee;
+        this.nombreEtudiantsGroupe = nombreEtudiantsGroupe;
     }
 
     public String getNom() {
@@ -29,11 +20,21 @@ public class Enseignant {
         this.nom = nom;
     }
 
-    public String getPrenom() {
-        return prenom;
+    public String getMatiereEnseignee() {
+        return matiereEnseignee;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public void setMatiereEnseignee(String matiereEnseignee) {
+        this.matiereEnseignee = matiereEnseignee;
     }
+
+    public int getNombreEtudiantsGroupe() {
+        return nombreEtudiantsGroupe;
+    }
+
+    public void setNombreEtudiantsGroupe(int nombreEtudiantsGroupe) {
+        this.nombreEtudiantsGroupe = nombreEtudiantsGroupe;
+    }
+
 }
+

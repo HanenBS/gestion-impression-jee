@@ -1,16 +1,21 @@
 package iit.jee.gestionimpressionjee.models;
 
-public class Etudiant {
+public class Administrateur {
     private int id;
     private String nom;
     private String prenom;
+    private String email;
+    private String motDePasse;
 
-    public Etudiant(int id, String nom, String prenom) {
+    public Administrateur(int id, String nom, String prenom, String email, String motDePasse) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
+        this.email = email;
+        this.motDePasse = motDePasse;
     }
 
+    // Getters et setters
     public int getId() {
         return id;
     }
@@ -33,5 +38,21 @@ public class Etudiant {
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
     }
 }
