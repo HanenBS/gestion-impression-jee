@@ -1,21 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Page de Connexion</title>
-</head>
-<body>
-<h2>Connexion</h2>
-<%-- Afficher un message d'erreur si les identifiants sont incorrects --%>
-<% if (request.getParameter("error") != null) { %>
-<p style="color: red;">Identifiants incorrects. Veuillez réessayer.</p>
-<% } %>
-<form action="LoginServlet" method="post">
-    <label for="username">Nom d'utilisateur:</label>
-    <input type="text" id="username" name="username" required><br><br>
-    <label for="password">Mot de passe:</label>
-    <input type="password" id="password" name="password" required><br><br>
-    <input type="submit" value="Se connecter">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!doctype html>
+<form action="Login" method="post" class="needs-validation" novalidate>
+    <!-- Username -->
+    <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input type="text" id="username" name="username" class="form-control" name="email" placeholder="username here" required>
+        <div class="invalid-feedback">Please enter valid username.</div>
+    </div>
+    <!-- Password -->
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" name="password" class="form-control" name="password" placeholder="************" required>
+        <div class="invalid-feedback">Please enter valid password.</div>
+    </div>
+
+
+    <div>
+        <!-- Button -->
+        <div class="d-grid mt-2">
+            <button type="submit" value="login" class="btn btn-primary">Sign in</button>
+        </div>
+    </div>
+    <hr class="my-4">
+
 </form>
-</body>
-</html>
+</div>

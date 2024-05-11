@@ -1,81 +1,49 @@
 package iit.jee.gestionimpressionjee.servlet;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/LoginServlet")
+
+import iit.jee.gestionimpressionjee.Dao.UserDao;
+import iit.jee.gestionimpressionjee.Dao.UserDaoImp;
+import iit.jee.gestionimpressionjee.models.User;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+@WebServlet("/Login")
 public class LoginServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+        dispatcher.forward(request, response);
+    }
+
+    private UserDao userDao = new UserDaoImp();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Récupérer les paramètres du formulaire de connexion
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // Vérifier les identifiants de l'utilisateur (vous pouvez remplacer ceci par votre logique de vérification)
-        boolean credentialsValid = validateCredentials(username, password);
+        // Retrieve user from database based on username and password
+        User user = userDao.getUserByUsernameAndPassword(username, password);
+        System.out.println("User ID Retrieved: " + user.getUserId());
 
-        if (credentialsValid) {
-            // Déterminer le rôle de l'utilisateur (vous pouvez remplacer ceci par votre logique de détermination de rôle)
-            String role = determineUserRole(username);
-
-            // Stocker le rôle de l'utilisateur dans la session
-            request.getSession().setAttribute("role", role);
-
-            // Rediriger l'utilisateur vers la page d'accueil appropriée en fonction du rôle
-            if (role.equals("enseignant")) {
-                response.sendRedirect("accueilEnseignant.jsp");
-            } else if (role.equals("administrateur")) {
-                response.sendRedirect("accueilAdministrateur.jsp");
-            } else if (role.equals("agenttirage")) {
-                response.sendRedirect("accueilAgentTirage.jsp");
-            }
+        if (user != null && user.isActive()) {
+            // User found, set session attribute and redirect to home page
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
+            response.sendRedirect("home.jsp");
         } else {
-            // Identifiants incorrects, rediriger vers la page de connexion avec un message d'erreur
-            response.sendRedirect("login.jsp?error=1");
+            // User not found, redirect to login page with error message
+            response.sendRedirect("login.jsp?error=Invalid credentials");
         }
     }
-
-    private boolean validateCredentials(String username, String password) {
-        try (Connection connection = DatabaseConnector.getConnection()) {
-            String query = "SELECT * FROM users WHERE username = ? AND password = ?";
-            try (PreparedStatement statement = connection.prepareStatement(query)) {
-                statement.setString(1, username);
-                statement.setString(2, password);
-                try (ResultSet resultSet = statement.executeQuery()) {
-                    return resultSet.next(); // Retourne true si les identifiants sont valides, sinon false
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false; // En cas d'erreur de base de données, considérer les identifiants comme invalides
-        }
-    }
-
-    private String determineUserRole(String username) {
-        try (Connection connection = DatabaseConnector.getConnection()) {
-            String query = "SELECT role FROM users WHERE username = ?";
-            try (PreparedStatement statement = connection.prepareStatement(query)) {
-                statement.setString(1, username);
-                try (ResultSet resultSet = statement.executeQuery()) {
-                    if (resultSet.next()) {
-                        return resultSet.getString("role"); // Retourne le rôle de l'utilisateur
-                    } else {
-                        return "unknown"; // Si l'utilisateur n'existe pas, retourne un rôle inconnu
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return "unknown"; // En cas d'erreur de base de données, retourne un rôle inconnu
-        }
-    }
-
 }

@@ -1,32 +1,44 @@
 package iit.jee.gestionimpressionjee.servlet;
 
-
-import iit.jee.gestionimpressionjee.models.Enseignant;
-import iit.jee.gestionimpressionjee.services.EnseignantService;
-
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
+@WebServlet("/Enseignant")
 public class EnseignantServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String matiere = request.getParameter("matiere");
-        String documentPDF = request.getParameter("documentPDF");
-        String dateHeureRetrait = request.getParameter("dateHeureRetrait");
-        int nombreCopies = Integer.parseInt(request.getParameter("nombreCopies"));
+        if (action == null) {
+            // Si aucune action spécifiée, rediriger vers la page d'accueil
+            response.sendRedirect("accueilEnseignant.jsp");
+            return;
+        }
 
-        Enseignant enseignant = new Enseignant("Nom de l'enseignant", "Matière enseignée", 30); // Supposons que le groupe contient 30 étudiants
-
-        EnseignantService enseignantService = new EnseignantService();
-        boolean demandeValide = enseignantService.validerDemandeTirage(enseignant, matiere, documentPDF, dateHeureRetrait, nombreCopies);
-
-        if (demandeValide) {
-            response.getWriter().println("Demande de tirage validée avec succès !");
-        } else {
-            response.getWriter().println("Erreur lors de la validation de la demande de tirage.");
+        switch (action) {
+            case "demandeTirage":
+                // Redirection vers la page de demande de tirage
+                response.sendRedirect("demandeTirage.jsp");
+                break;
+            case "etatDemandes":
+                // Redirection vers la page de consultation de l'état des demandes
+                response.sendRedirect("etatDemandes.jsp");
+                break;
+            case "modifierProfil":
+                // Redirection vers la page de modification du profil
+                response.sendRedirect("modifierProfile.jsp");
+                break;
+            case "deconnexion":
+                // Redirection vers la page de déconnexion
+                response.sendRedirect("deconnexion.jsp");
+                break;
+            default:
+                // Si une action non reconnue est spécifiée, rediriger vers la page d'accueil
+                response.sendRedirect("accueilEnseignant.jsp");
+                break;
         }
     }
-
 }

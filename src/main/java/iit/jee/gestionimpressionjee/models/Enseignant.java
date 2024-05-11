@@ -12,6 +12,8 @@ public class Enseignant {
         this.nombreEtudiantsGroupe = nombreEtudiantsGroupe;
     }
 
+    // Getters et Setters
+
     public String getNom() {
         return nom;
     }
@@ -36,5 +38,14 @@ public class Enseignant {
         this.nombreEtudiantsGroupe = nombreEtudiantsGroupe;
     }
 
-}
+    // Méthode toString()
 
+    @Override
+    public String toString() {
+        return "Enseignant{" +
+                "nom='" + nom + '\'' +
+                ", matiereEnseignee='" + matiereEnseignee + '\'' +
+                ", nombreEtudiantsGroupe=" + nombreEtudiantsGroupe +
+                '}';
+    }
+}
