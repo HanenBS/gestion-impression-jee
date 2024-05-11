@@ -1,32 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 06/05/2024
-  Time: 20:21
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Tableau de Bord</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Plateforme de Gestion d'Impression</title>
+    <style>
+        /* Ajoutez vos styles CSS personnalisés ici */
+        /* Cela peut inclure la mise en forme de texte, des couleurs, etc. */
+    </style>
 </head>
 <body>
-<h1>Tableau de Bord</h1>
-<table>
-    <thead>
-    <tr>
-        <th>Enseignant</th>
-        <th>Nombre de Copies</th>
-        <th>Date de Réception</th>
-        <th>Document à Imprimer</th>
-    </tr>
-    </thead>
-    <tbody>
-    <%-- Afficher les tâches de l'enseignant --%>
-    </tbody>
-</table>
+<h1>Bienvenue sur la Plateforme de Gestion d'Impression</h1>
+<p>Cette plateforme facilite la gestion des demandes d'impression dans notre institution.</p>
+<h2>Connexion</h2>
+<ul>
+    <li><a href="login.jsp?type=agent">Connexion de l'Agent de Tirage</a></li>
+    <li><a href="login.jsp?type=enseignant">Connexion de l'Enseignant</a></li>
+    <li><a href="login.jsp?type=admin">Connexion de l'Administrateur</a></li>
+</ul>
 </body>
 </html>
-

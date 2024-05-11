@@ -1,9 +1,12 @@
 package iit.jee.gestionimpressionjee.servlet;
 
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
-import iit.jee.gestionimpressionjee.utils.MongoDBUtil;
+import iit.jee.gestionimpressionjee.dao.UserDao;
+import iit.jee.gestionimpressionjee.dao.UserDaoImp;
+import iit.jee.gestionimpressionjee.models.User;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import org.bson.Document;
 
 import javax.servlet.ServletException;
@@ -13,38 +16,46 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.IOException;
 
-@WebServlet("/LoginServlet")
+
+import jakarta.servlet.RequestDispatcher;
+
+
+@WebServlet("/Login")
 public class LoginServlet extends HttpServlet {
-    private final MongoDatabase database = MongoDBUtil.connect();
+    private static final long serialVersionUID = 1L;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        RequestDispatcher dispatcher = (RequestDispatcher) request.getRequestDispatcher("login.jsp");
+        try {
+            dispatcher.forward((ServletRequest) request, (ServletResponse) response);
+        } catch (jakarta.servlet.ServletException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private UserDao userDao = new UserDaoImp();
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        MongoCollection<Document> usersCollection = database.getCollection("users");
-        Document user = usersCollection.find(Filters.eq("username", username)).first();
+        // Retrieve user from database based on username and password
+        User user = userDao.getUserByUsernameAndPassword(username, password);
+        System.out.println("User ID Retrieved: " + user.getUserId());
 
-        if (user != null && user.getString("password").equals(password)) {
+        if (user != null && user.isActive()) {
+            // User found, set session attribute and redirect to home page
             HttpSession session = request.getSession();
-            session.setAttribute("username", username);
-            session.setAttribute("role", user.getString("role"));
-            response.sendRedirect(getDashboardURL(user.getString("role")));
+            session.setAttribute("user", user);
+            response.sendRedirect("home.jsp");
         } else {
-            response.sendRedirect("login.jsp");
-        }
-    }
-
-    private String getDashboardURL(String role) {
-        if ("admin".equals(role)) {
-            return "admin_dashboard.jsp";
-        } else if ("teacher".equals(role)) {
-            return "teacher_dashboard.jsp";
-        } else if ("printer".equals(role)) {
-            return "printer_dashboard.jsp";
-        } else {
-            return "login.jsp";
+            // User not found, redirect to login page with error message
+            response.sendRedirect("login.jsp?error=Invalid credentials");
         }
     }
 }
-
