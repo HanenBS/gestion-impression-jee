@@ -1,6 +1,5 @@
 package iit.jee.gestionimpressionjee.servlet;
 
-
 import iit.jee.gestionimpressionjee.enums.UserRole;
 import iit.jee.gestionimpressionjee.models.User;
 
@@ -13,7 +12,6 @@ import java.io.IOException;
 
 public abstract class SecuredServlet extends HttpServlet {
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -25,9 +23,8 @@ public abstract class SecuredServlet extends HttpServlet {
         }
 
         User user = (User) session.getAttribute("user");
-        UserRole userRole = user.getRole();
 
-        if (isAuthorized(userRole)) {
+        if (isAuthorized(user, UserRole.ADMIN)) {
             // User has proper role, continue processing request (dispatch to JSP)
             doGetInternal(request, response);
         } else {
@@ -35,16 +32,11 @@ public abstract class SecuredServlet extends HttpServlet {
             response.sendRedirect("login.jsp");
         }
     }
-    private boolean isAuthorized(UserRole userRole) {
-        for (UserRole allowedRole : UserRole.values()) {
-            if (userRole == allowedRole)
-            {
 
-                return true;
-            }
-        }
-        return false;
+    private boolean isAuthorized(User user, UserRole requiredRole) {
+        return user != null && user.hasRole(requiredRole);
     }
+
     protected abstract void doGetInternal(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException;
 }

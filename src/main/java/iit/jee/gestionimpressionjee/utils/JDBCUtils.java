@@ -11,12 +11,9 @@ public class JDBCUtils {
 
     public static Connection getConnection() throws SQLException {
         try {
-            // Chargement explicite du pilote JDBC
             Class.forName("com.mysql.cj.jdbc.Driver");
-            // Connexion à la base de données
             return DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (ClassNotFoundException e) {
-            // Si le pilote JDBC n'est pas trouvé
             throw new SQLException("Le pilote JDBC n'a pas été trouvé", e);
         }
     }

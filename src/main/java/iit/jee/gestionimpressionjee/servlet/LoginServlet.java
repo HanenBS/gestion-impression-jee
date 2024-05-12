@@ -1,13 +1,11 @@
 package iit.jee.gestionimpressionjee.servlet;
 
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.model.Filters;
+
 import iit.jee.gestionimpressionjee.dao.UserDao;
 import iit.jee.gestionimpressionjee.dao.UserDaoImp;
 import iit.jee.gestionimpressionjee.models.User;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
-import org.bson.Document;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.IOException;
+
 
 
 import jakarta.servlet.RequestDispatcher;

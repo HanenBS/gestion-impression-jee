@@ -1,21 +1,13 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 06/05/2024
-  Time: 20:30
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Confirmation de demande</title>
+    <title>Confirmation de la Demande</title>
 </head>
 <body>
-<h1>Demande de tirage envoyée avec succès</h1>
-<p>Merci, votre demande a été transmise à l'agent de tirage.</p>
+<h1>Demande d'Impression Traitée avec Succès</h1>
+<p>Merci, la demande d'impression a été traitée avec succès.</p>
+<!-- Autres informations ou liens vers d'autres pages si nécessaire -->
 </body>
 </html>
-
